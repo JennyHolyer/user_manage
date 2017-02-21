@@ -1,0 +1,39 @@
+<div class='container'>
+  <h1>New User</h1>
+
+
+  <div class='row'>
+    <form action='/create' method='post'>
+      <input type='hidden' name="authenticity_token" value="<%= form_authenticity_token  %>">
+      <div class="form-group">
+        <label for="f_name">First Name:</label>
+        <input type="text" class="form-control" id="f_name" name='f_name'>
+      </div>
+
+      <div class="form-group">
+        <label for="l_name">Last Name:</label>
+        <input type="text" class="form-control" id="l_name" name="l_name">
+      </div>
+
+
+      <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="email" class="form-control" id="email" name='email'>
+      </div>
+
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="pwd" name='password'>
+      </div>
+
+      <button type="submit" class="btn btn-default">Create User</button>
+    </form>
+
+  </div>
+
+
+  <div class='row'>
+    <a href='/' class='btn btn-default'>back</a>
+  </div>
+
+</div>

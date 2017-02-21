@@ -1,0 +1,50 @@
+<div class='container'>
+  <div class='row'>
+    <h1>Listing Users</h1>
+  </div>
+
+  <div class='row'>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Email</th>
+          <th>Options</th>
+        </tr>
+      </thead>
+      <tbody>
+
+
+        <% @users.each do |user| %>
+
+
+        <tr>
+          <td><%= user['first_name'] %></td>
+          <td><%= user['last_name'] %></td>
+          <td><%= user['email'] %></td>
+            <td>
+
+              <a href='/users/<%= user['id'] %>' class='btn btn-default'>Show</a> | <a href='/users/<%= user['id'] %>/edit' class='btn btn-default'>Edit</a> | <a href='/delete/<%= user['id'] %>' class='btn btn-default'>Delete</a>
+
+
+            </td>
+        </tr>
+
+
+        <% end %>
+
+
+
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class='row'>
+    <a href='/users/new' class='btn btn-default'>New User</a>
+  </div>
+
+
+
+</div>
